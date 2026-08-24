@@ -12,7 +12,7 @@
     "require": {
         "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
         "laravel/framework": "^10.0 || ^11.0 || ^12.0 || ^13.0",
-        "roach-php/core": "^2.0 || ^3.0 || dev-main",
+        "roach-php/core": "@dev",
         "spatie/laravel-package-tools": "^1.11"
     },
     "require-dev": {
@@ -46,17 +46,5 @@
                 "RoachPHP\\Laravel\\RoachServiceProvider"
             ]
         }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "composer normalize"
-        ],
-        "post-update-cmd": [
-            "composer normalize"
-        ],
-        "coding-standards": [
-            "mkdir -p .build/php-cs-fixer",
-            "php-cs-fixer fix --diff --verbose"
-        ]
     }
 }

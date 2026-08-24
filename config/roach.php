@@ -41,5 +41,5 @@ return [
     | leading or trailing backslashes.
     |
     */
-    'default_spider_namespace' => 'App\Spiders',
+    'default_spider_namespace' => 'AlexKassel\CarSubscriptionAggregator\Spiders',
 ];
