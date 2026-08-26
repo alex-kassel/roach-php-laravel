@@ -81,10 +81,10 @@ Roach::queueSpider(\App\Spiders\ExampleSpider::class);
 
 ## Testing
 
-Execute the test suite using Artisan:
+Execute the test suite using PHPUnit:
 
 ```bash
-php artisan test -c packages/alex-kassel/roach-php-laravel/phpunit.xml
+composer test
 ```
 
 ---
