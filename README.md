@@ -24,6 +24,21 @@
 
 ---
 
+> [!NOTE]
+> **Community Fork**  
+> This package is a Laravel adapter fork of the original [`roach-php/laravel`](https://github.com/roach-php/laravel) created by [Kai Sassnowski](https://github.com/kaisassnowski).
+>
+> *As described by the original author:*  
+> *"Roach is a complete web scraping toolkit for PHP. It is heavily inspired (read: a shameless clone) of the popular [Scrapy](https://scrapy.org) package for Python."*
+>
+> **Improvements in this Fork:**
+> - **Laravel 13 Support:** Compatible with Laravel 10.x, 11.x, 12.x, and Laravel 13.x.
+> - **Enhanced Core Dependency:** Configured to pull our [`alex-kassel/roach-php-core`](https://github.com/alex-kassel/roach-php-core) fork to leverage lazy DOM crawler loading and native JSON response handling.
+>
+> 📖 **Laravel Documentation:** [https://roach-php.dev/docs/laravel](https://roach-php.dev/docs/laravel) • **Core Docs:** [https://roach-php.dev](https://roach-php.dev)
+
+---
+
 ## Key Features
 
 * **Laravel Service Container Bridge:** First-class dependency injection and configuration bindings for all spiders and item pipelines.
