@@ -1,7 +1,7 @@
 <h1 align="center">🕷️ Roach PHP Laravel Adapter</h1>
 
 <p align="center">
-  <strong>Seamless Laravel integration and Artisan toolkit for Roach PHP web scraping</strong>
+  <strong>Laravel 10–13 adapter for Roach PHP web scraping toolkit. Community fork of roach-php/laravel.</strong>
 </p>
 
 <p align="center">

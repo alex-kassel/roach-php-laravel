@@ -1,6 +1,6 @@
 {
     "name": "alex-kassel/roach-php-laravel",
-    "description": "Laravel adapter for roach-php/core web scraping toolkit",
+    "description": "Community fork of roach-php/laravel with Laravel 10–13 compatibility, powered by optimized lazy-core",
     "type": "library",
     "license": "MIT",
     "keywords": [
