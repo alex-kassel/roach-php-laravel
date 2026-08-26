@@ -29,7 +29,7 @@ final class RegisterDefaultNamespaceTest extends TestCase
         parent::tearDown();
     }
 
-    public function testUseDefaultNamespaceFromConfigFile(): void
+    public function test_use_default_namespace_from_config_file(): void
     {
         config(['roach.default_spider_namespace' => 'RoachPHP\Laravel\Tests\Fixtures']);
         $runner = Roach::fake();

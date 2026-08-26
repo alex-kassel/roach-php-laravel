@@ -19,17 +19,19 @@ use Symfony\Component\Console\Input\InputOption;
 final class SpiderMakeCommand extends GeneratorCommand
 {
     protected $name = 'roach:spider';
+
     protected $description = 'Create a new spider class';
+
     protected $type = 'Spider';
 
     protected function getStub(): string
     {
-        return __DIR__ . '/stubs/spider.stub';
+        return __DIR__.'/stubs/spider.stub';
     }
 
     protected function getDefaultNamespace($rootNamespace): string
     {
-        return config('roach.default_spider_namespace', $rootNamespace . '\Spiders');
+        return config('roach.default_spider_namespace', $rootNamespace.'\Spiders');
     }
 
     protected function getOptions()

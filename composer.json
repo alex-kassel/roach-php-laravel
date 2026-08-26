@@ -1,29 +1,48 @@
 {
-    "name": "roach-php/laravel",
-    "description": "Laravel adapter for roach-php/core",
-    "license": "MIT",
+    "name": "alex-kassel/roach-php-laravel",
+    "description": "Laravel adapter for roach-php/core web scraping toolkit",
     "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "scraping",
+        "crawler",
+        "spider",
+        "scraper",
+        "roach",
+        "roach-php"
+    ],
+    "homepage": "https://github.com/alex-kassel/roach-php-laravel",
+    "support": {
+        "issues": "https://github.com/alex-kassel/roach-php-laravel/issues",
+        "source": "https://github.com/alex-kassel/roach-php-laravel"
+    },
     "authors": [
         {
             "name": "Kai Sassnowski",
-            "email": "me@kai-sassnowski.com"
+            "email": "me@kai-sassnowski.com",
+            "role": "Original Author"
+        },
+        {
+            "name": "Alexander Macenko",
+            "email": "alexander.macenko@gmail.com",
+            "role": "Maintainer"
         }
     ],
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+        "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
+        "alex-kassel/roach-php-core": "^1.0",
         "laravel/framework": "^10.0 || ^11.0 || ^12.0 || ^13.0",
-        "roach-php/core": "@dev",
         "spatie/laravel-package-tools": "^1.11"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.15",
-        "ergebnis/php-cs-fixer-config": "^6.19",
-        "orchestra/testbench": "^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
-        "phpunit/phpunit": "^10.0 || ^11.0",
-        "roave/security-advisories": "dev-latest",
-        "spatie/phpunit-snapshot-assertions": "^5.0"
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0 || ^11.0",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0",
+        "roave/security-advisories": "dev-latest"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
@@ -35,16 +54,15 @@
             "RoachPHP\\Laravel\\Tests\\": "tests/"
         }
     },
-    "config": {
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true
-        }
-    },
     "extra": {
         "laravel": {
             "providers": [
                 "RoachPHP\\Laravel\\RoachServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "analyze": "vendor/bin/phpstan analyse src",
+        "test": "vendor/bin/phpunit"
     }
 }

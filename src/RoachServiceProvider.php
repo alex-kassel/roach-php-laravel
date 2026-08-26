@@ -69,7 +69,7 @@ final class RoachServiceProvider extends PackageServiceProvider
         $this->app->bind(
             NamespaceResolverInterface::class,
             static fn (Application $app) => new DefaultNamespaceResolverDecorator(
-                new StaticNamespaceResolver(),
+                new StaticNamespaceResolver,
                 config('roach.default_spider_namespace') ?: 'App\Spiders',
             ),
         );

@@ -1,14 +1,22 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Internal Patches]
+## [1.0.0] - 2026-08-26
 
-- Internal monorepo custom fixes applied (see [PATCHES.md](./PATCHES.md) for detailed commit history and fix descriptions).
+### Added
+- Initial community release under `alex-kassel/roach-php-laravel` vendor namespace.
+- Support for Laravel 10.0, 11.0, 12.0, and 13.0.
+- Support for PHP `~8.2.0 || ~8.3.0 || ~8.4.0`.
+- Integrated dependency on `alex-kassel/roach-php-core: ^1.0`.
+- Certified test suite and Pint code styling.
 
-## [3.3.0] - 2026-04-13
+---
+
+## Historical Upstream Releases (`roach-php/laravel`)
 
 
 ### Added

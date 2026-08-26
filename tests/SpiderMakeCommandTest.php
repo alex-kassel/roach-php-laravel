@@ -14,15 +14,12 @@ declare(strict_types=1);
 namespace RoachPHP\Laravel\Tests;
 
 use Illuminate\Support\Facades\File;
-use Spatie\Snapshots\MatchesSnapshots;
 
 /**
  * @internal
  */
 final class SpiderMakeCommandTest extends TestCase
 {
-    use MatchesSnapshots;
-
     protected function setUp(): void
     {
         parent::setUp();
@@ -32,15 +29,19 @@ final class SpiderMakeCommandTest extends TestCase
 
     protected function tearDown(): void
     {
-        File::deleteDirectory(__DIR__ . '/Fixtures/Spiders');
+        File::deleteDirectory(__DIR__.'/Fixtures/Spiders');
 
         parent::tearDown();
     }
 
-    public function testCreateNewSpiderClass(): void
+    public function test_create_new_spider_class(): void
     {
         $this->artisan('roach:spider', ['name' => 'ExampleSpider']);
 
-        $this->assertMatchesFileSnapshot(app_path('Spiders/Test/ExampleSpider.php'));
+        $generatedPath = app_path('Spiders/Test/ExampleSpider.php');
+        $expectedPath = __DIR__.'/__snapshots__/files/SpiderMakeCommandTest__testCreateNewSpiderClass__1.php';
+
+        self::assertFileExists($generatedPath);
+        self::assertStringEqualsFile($expectedPath, File::get($generatedPath));
     }
 }
