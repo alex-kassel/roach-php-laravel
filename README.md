@@ -50,7 +50,7 @@
 
 ## Requirements
 
-* **PHP:** 8.2+ (tested on PHP 8.2, 8.3, and 8.4)
+* **PHP:** 8.2+ (tested on PHP 8.2, 8.3, 8.4, and 8.5)
 * **Laravel Framework:** 10.x | 11.x | 12.x | 13.x
 * **Core Library:** `alex-kassel/roach-php-core: ^1.0`
 
@@ -96,10 +96,10 @@ Roach::queueSpider(\App\Spiders\ExampleSpider::class);
 
 ## Testing
 
-Execute the test suite using PHPUnit:
+From the monorepo root, run the complete package verification pipeline:
 
 ```bash
-composer test
+composer pkg:check alex-kassel/roach-php-laravel --json
 ```
 
 ---
